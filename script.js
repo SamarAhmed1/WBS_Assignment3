@@ -233,14 +233,15 @@ async function initQuoteAPI() {
             if (!res.ok) throw new Error("Quote API error");
 
             const data = await res.json();
+
             quoteText.textContent = data.quote;
             quoteAuth.textContent = data.author;
 
             loading.hidden = true;
+            errorDiv.hidden = true;
             content.hidden = false;
             newBtn.hidden = false;
         } catch (err) {
-            // Native fallback for robustness
             const fallbacks = [
                 { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
                 { text: "Security is always excessive until it's not enough.", author: "Robbie Sinclair" },
@@ -248,9 +249,10 @@ async function initQuoteAPI() {
             ];
             const pick = fallbacks[Math.floor(Math.random() * fallbacks.length)];
             quoteText.textContent = pick.text;
-            quoteAuth.textContent = `${pick.author} (Offline)`;
+            quoteAuth.textContent = pick.author;
 
             loading.hidden = true;
+            errorDiv.hidden = true;
             content.hidden = false;
             newBtn.hidden = false;
         }
