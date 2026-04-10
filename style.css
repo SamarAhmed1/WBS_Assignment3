@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 :root {
     --navy: #2e1065;
     --navy2: #1e1b4b;
@@ -579,7 +583,6 @@ blockquote footer {
 }
 
 .field-error {
-    display: none;
     color: var(--error);
     font-size: 0.8em;
     margin-top: 3px;
