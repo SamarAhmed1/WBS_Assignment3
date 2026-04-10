@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Samar Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">SA</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeBtn" aria-label="Toggle dark mode">Dark mode</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <ul class="contact-list">
+                    <li><a href="tel:+201093036682">+20 109 303 6682</a></li>
+                    <li><a href="mailto:Samarthabet@aucegypt.edu">Samarthabet@aucegypt.edu</a></li>
+                    <li><a href="https://www.linkedin.com/in/samar-ashraf-mohamed-thabet-ahmed"
+                            target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/SamarAhmed1" target="_blank">GitHub</a></li>
+                </ul>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your full name">
+                        <span class="field-error" id="nameError" hidden>Name is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com">
+                        <span class="field-error" id="emailError" hidden>Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="4" placeholder="Write your message here..."></textarea>
+                        <span class="field-error" id="messageError" hidden>Message cannot be empty.</span>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message &rarr;</button>
+                    <p id="formSuccess" class="success-msg" hidden>✓ Message sent! I'll get back to you soon.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Quotes API Section -->
+        <section id="quote">
+            <h2>Daily Motivation</h2>
+            <p class="section-desc">Random motivational quote fetched via API</p>
+            <div id="quote-loading" class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading quote...</p>
+            </div>
+            <div id="quote-error" class="error-state" hidden>
+                <p>Could not load a quote right now.</p>
+            </div>
+            <blockquote id="quote-content" hidden>
+                <p id="quote-text"></p>
+                <footer>&mdash; <cite id="quote-author"></cite></footer>
+            </blockquote>
+            <button id="new-quote-btn" class="btn-primary" hidden>New Quote</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Samar Ahmed &middot; Built with HTML, CSS & JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

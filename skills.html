@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills – Samar Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">SA</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeBtn" aria-label="Toggle dark mode">Dark mode</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Languages</h4>
+                    <div class="tags">
+                        <span>Python</span><span>C</span><span>C++</span><span>C#</span>
+                        <span>Java</span><span>JavaScript</span><span>TypeScript</span>
+                        <span>HTML/CSS</span><span>SQL</span><span>Verilog</span><span>Assembly</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Tools & Frameworks</h4>
+                    <div class="tags">
+                        <span>NVIDIA Isaac Sim</span><span>Grafana</span><span>Wireshark</span>
+                        <span>React</span><span>React Native</span><span>Docker</span>
+                        <span>Git</span><span>Vivado</span><span>Cisco Packet Tracer</span>
+                        <span>Unity</span><span>Arduino</span><span>Raspberry Pi</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Concepts</h4>
+                    <div class="tags">
+                        <span>Agile</span><span>OOP</span><span>Network Security</span>
+                        <span>Incident Management</span><span>Teleoperation</span>
+                        <span>Automation</span><span>Version Control</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Languages Spoken</h4>
+                    <div class="tags">
+                        <span>Arabic (native)</span><span>English (fluent)</span>
+                    </div>
+                </div>
+            </div>
+            <div id="addSkillArea">
+                <input type="text" id="skillInput" placeholder="Add a new skill...">
+                <button id="addSkillBtn" class="btn-primary">+ Add Skill</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Samar Ahmed &middot; Built with HTML, CSS & JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

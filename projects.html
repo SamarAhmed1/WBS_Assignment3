@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – Samar Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">SA</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeBtn" aria-label="Toggle dark mode">Dark mode</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project-card">
+                <h3>MATE ROV (Underwater Robot)</h3>
+                <button class="detail-toggle btn-outline">Show Details</button>
+                <ul class="project-details" hidden>
+                    <li>Led software development for an underwater ROV with sensor input, thrust control, and GUI.</li>
+                    <li>Implemented computer vision for real-time telemetry and advanced control.</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>Secure Campus Network</h3>
+                <button class="detail-toggle btn-outline">Show Details</button>
+                <ul class="project-details" hidden>
+                    <li>Designed a multi-building campus network in Cisco Packet Tracer with VLANs, BYOD policies, and
+                        firewall rules.</li>
+                    <li>Simulated real-world attacks and developed mitigation strategies.</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>RISC-V Processor Implementation</h3>
+                <button class="detail-toggle btn-outline">Show Details</button>
+                <ul class="project-details" hidden>
+                    <li>Implemented single-cycle and pipelined RISC-V datapaths in Verilog with all 42 instructions.
+                    </li>
+                    <li>Developed two branch predictors for performance optimisation.</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>EcoVibe &ndash; Sustainability App</h3>
+                <button class="detail-toggle btn-outline">Show Details</button>
+                <ul class="project-details" hidden>
+                    <li>Built a gamified recycling awareness mobile app using React Native and Node.js with a 6-member
+                        team.</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h3>Digital Simulator & Unity Game</h3>
+                <button class="detail-toggle btn-outline">Show Details</button>
+                <ul class="project-details" hidden>
+                    <li>Developed a Unity game for an AUB competition and a GUI-based digital circuit simulator using
+                        OOP.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- GitHub API Section -->
+        <section id="github">
+            <h2>GitHub Repositories</h2>
+            <p class="section-desc">Live data fetched from the GitHub API</p>
+            <div id="github-loading" class="loading-state">
+                <div class="spinner"></div>
+                <p>Fetching repositories...</p>
+            </div>
+            <div id="github-error" class="error-state" hidden>
+                <p>Could not load repositories. Please try again later.</p>
+                <button id="github-retry" class="btn-primary">Retry</button>
+            </div>
+            <div id="github-cards" class="repo-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Samar Ahmed &middot; Built with HTML, CSS & JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
