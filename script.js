@@ -229,14 +229,12 @@ async function initQuoteAPI() {
         newBtn.hidden = true;
 
         try {
-            const res = await fetch("https://api.quotable.kurokeita.dev/api/quotes/random");
+            const res = await fetch("https://dummyjson.com/quotes/random");
             if (!res.ok) throw new Error("Quote API error");
 
             const data = await res.json();
-            const q = data.quote || data;
-            
-            quoteText.textContent = q.content || q.text;
-            quoteAuth.textContent = q.author || "Unknown";
+            quoteText.textContent = data.quote;
+            quoteAuth.textContent = data.author;
 
             loading.hidden = true;
             content.hidden = false;
